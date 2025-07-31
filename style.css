@@ -96,7 +96,7 @@ body::before {
 
 h1 {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
+    font-size: 50px;
     padding-bottom: 3rem;
 }
 
@@ -108,4 +108,17 @@ button {
 .texto__parrafo {
     font-size: 32px;
     font-weight: 400;
+}
+
+.container__select{
+    display: block;
+    padding: 25px 20px;
+}
+
+select{
+    color: #1354A5;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 10px 25px;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -21,20 +21,25 @@
                     <h1></h1>
                     <p class="texto__parrafo"></p>
                 </div>
+                <div class="container__select">
+                    <select id="selectDificultad">
+                        <option value="">Selecciona</option>
+                        <option value="1">Fácil</option>
+                        <option value="2">Intermedio</option>
+                        <option value="3">Extremo</option>
+                    </select>
+                </div>
                 <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
                 <div class="chute container__botones">
-                    <button onclick="verificarIntento();" class="container__boton">Intentar</button>
-                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>
+                    <button onclick="iniciarJuego();" class="container__boton" id="iniciar">Iniciar</button>
+                    <button onclick="verificarIntento();" class="container__boton" id="intentar" >Intentar</button>
+                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" >Nuevo numero</button>
+                    <button onclick="reiniciar();" class="container__boton" id="reset">Reiniciar</button>
                 </div>
             </div>
             <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
         </div>
     </div>
-
-
-
-
-    <script src="app.js" defer></script>
+    <script src="app.js"></script>
 </body>
-
 </html>
