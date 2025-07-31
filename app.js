@@ -20,9 +20,11 @@ function verificarIntento() {
     } else {
         //El usuario no acertó.
         if (numeroDeUsuario > numeroSecreto) {
-            asignarTextoElemento('p','El número secreto es menor');
+            asignarTextoElemento('#textoComparacion','El número secreto es menor ⬇️⬇️⬇️');
+            asignarTextoElemento('p','Comienza el juego!<br>Ingresa un número entre 1 y ' + numeroMaximo);
         } else {
-            asignarTextoElemento('p','El número secreto es mayor');
+            asignarTextoElemento('#textoComparacion','El número secreto es mayor ⬆️⬆️⬆️');
+            asignarTextoElemento('p','Comienza el juego!<br>Ingresa un número entre 1 y ' + numeroMaximo);
         }
         intentos++;
         limpiarCaja();
@@ -60,11 +62,12 @@ function reiniciar() {
     mensajeBienvenida();
     estadosIniciales();
     listaNumerosSorteados = [];
+    document.getElementById('selectDificultad').style.display = 'block';
 }
 
 // Pantalla de fin
 function pantallaFin() {
-    asignarTextoElemento('p','Ya se sortearon todos los números posibles<br>Selecciona una dificultad de nuevo para volver a comenzar');
+    asignarTextoElemento('p','Se han sorteado todos los números posibles<br>Presiona <b>Reiniciar</b> para comenzar de nuevo');
     document.getElementById('intentar').setAttribute('disabled', 'true');
 }
 
@@ -89,7 +92,7 @@ function generarJuego() {
 }
 
 // Reinicia el juego
-function reiniciarJuego() {
+function nuevoNumero() {
     //limpiar caja
     limpiarCaja();
     //Indicar mensaje de intervalo de números 
@@ -122,6 +125,8 @@ function iniciarJuego() {
             return;
     }
     generarJuego();
+    asignarTextoElemento('p','Comienza el juego!<br>Ingresa un número entre 1 y ' + numeroMaximo);
+    document.getElementById('selectDificultad').style.display = 'none';
 }
 
 mensajeBienvenida();
