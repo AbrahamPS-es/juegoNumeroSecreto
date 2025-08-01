@@ -20,17 +20,20 @@
                 <div class="container__texto">
                     <h1></h1>
                     <p class="texto__parrafo"></p>
-                    <p id="textoComparacion"></p>
                 </div>
+                <p id="textoComparacion"></p><br>
                 <div class="container__select">
                     <select id="selectDificultad">
                         <option value="" selected disabled>Selecciona</option>
-                        <option value="1">Fácil</option>
-                        <option value="2">Intermedio</option>
-                        <option value="3">Extremo</option>
+                        <option value="1">Fácil: 1 - 10</option>
+                        <option value="2">Intermedio: 1 - 100</option>
+                        <option value="3">Extremo: 1 - 1,000</option>
                     </select>
                 </div>
+                <p id="textoAyuda"></p>
                 <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
+                <button onclick="mostrarAyuda();" class="botonAyuda" id="botonAyuda">Ayuda</button>
+                <p id="parrafoIntentos"></p>
                 <div class="chute container__botones">
                     <button onclick="iniciarJuego();" class="container__boton" id="iniciar">Iniciar</button>
                     <button onclick="verificarIntento();" class="container__boton" id="intentar" >Intentar</button>
